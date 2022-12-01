@@ -7,9 +7,7 @@ int n,sum;
      n=input_n();
      sum=sum_n_nos(n);
      output(n,sum);
-     return 0;
-  
-}
+     return 0;}
 int input_n(){
    int n;
     printf("Enter the number\n");
