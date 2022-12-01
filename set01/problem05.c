@@ -9,16 +9,15 @@ int a, b,c,largest;
      c=input();
     largest=compare(a, b,c);
      output(a,b,c,largest);
-     return 0;
-  
-}
+     return 0;}
+
 int input(){
    int n;
     printf("Enter the number\n");
     scanf("%d", &n);
     return n;
 }
-int compare(int a, int b, int c,int largest)
+int compare(int a, int b, int c)
 {
   if(a>b && a>c){
     return a;
@@ -33,8 +32,6 @@ int compare(int a, int b, int c,int largest)
 
 void output(int a, int b, int c,int largest)
 {
-  
-  
-  printf("the largest of %d , %d and %d is %d\n", a, b, c,largest);
+   printf("the largest of %d , %d and %d is %d\n", a, b, c,largest);
   return largest;
 }
