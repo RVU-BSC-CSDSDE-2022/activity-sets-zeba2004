@@ -9,9 +9,7 @@ int a, b,c,largest;
      c=input();
     largest=compare(a, b,c,&largest);
      output(a,b,c,largest);
-     return 0;
-  
-}
+     return 0;}
 int input(){
    int n;
     printf("Enter the number\n");
