@@ -1,58 +1,38 @@
 #include<stdio.h>
-void input_camel_details(float *stomach_radius, float *height, float *length);
-int find_mood(float stomach_radius, float height, float length);
-void output(float stomach_radius, float height, float length, int mood);
+int input_array_size();
+void input_array(int n, int a[n]);
+int sum_composite_numbers(int n, int a[n]);
+void output(int sum);
 int main(){
-  int stomach_radius,height,length,mood;
-  input_camel_details(&stomach_radius,&height,&length);
-    mood=find_mood(stomach_radius, height, length);
-  output(stomach_radius, height, length,  mood);
+  int n,sum;
+  int i=1;
+  int num;
+  n=input_array_size();
+  int a[n];
+  input_array(n,a);
+  // sum=sum_composite_numbers(n,a); 
+  output(sum);
 }
-void input_camel_details(float *stomach_radius, float *height, float *length){
-  
-  printf("enter stomach_radius");
-   scanf("%f",&stomach_radius);
-  
-  printf("enter height");
-  scanf("%f",&height);
-  
-  printf("enter length");
-  scanf("%f",&length);
-  return stomach_radius,height,length;
+int input_array_size(){
+  int n;
+  printf("enter size of array n:\n");
+  scanf("%d",&n);
+  return n;
 }
-int find_mood(float stomach_radius, float height, float length){
-  int mood;
-  if(stomach_radius<height && stomach_radius<length){
-      return 1;
-     
+void input_array(int n, int a[n]){
+ printf("\ninput elements of array "); 
+    for(int i=0;i<n;i++){ 
+        scanf("%d",&a[i]); }
   }
-  else if(height<length && height<stomach_radius){
-     return 2;
-    
-    }
-  else{
-     return 3;
-    
-    }
+int sum_composite_numbers(int n, int a[n]){
+ for(int i=1;i<n;i++){
+   if
+ }
   
- 
   
-  }
-void output(float stomach_radius, float height, float length, int mood){
   
-  if(mood==1){
-    printf("The camel is sick");
-    }
-    
   
-   else if(mood==2){
-    printf("The camel is happy");
-     }
-  
-      
-   else{
-    printf("The camel is tense");
-    
-  }
- 
+
+void output(int sum){
+  printf("sum is %d",sum);
 }

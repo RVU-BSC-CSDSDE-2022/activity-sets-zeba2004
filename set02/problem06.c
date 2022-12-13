@@ -22,14 +22,7 @@ int main(){
    
   void input(int n, int a[n]){
   
-  printf("enter values of an array\n");
-  
-  for (int i=0;i<n;i=i+1)
-    {
-      scanf("%d",&a[i]);
-      
-    }
-    }
+  }}
     float odd_average(int n, int a[n]){
       int sum=0;
       int count=0;

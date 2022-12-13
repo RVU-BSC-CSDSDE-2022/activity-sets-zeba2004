@@ -1,25 +1,25 @@
 #include<stdio.h>
-void input(float base, float height);
-float find_area(float base , float height, float *area);
-void output(float base, float height, float area);
+void input(float *x1, float *y1, float *x2, float *y2);
+float find_distance(float x1, float y1, float x2, float y2);
+void output(float x1, float y1, float x2, float y2, float distance);
 int main(){
-  float base,height,area;
-  input(base,height);
-  area = find_area(base,height,&area);
-  output(base,height,area);
-}
-void input(float base, float height){
+  float x1,x2,y1,y2,distance;
+  input(&x1,&y1,&x2,&y2);
+  distance=find_distance(x1,y1,x2,y2);
   
-  printf("enter base");
-  scanf("%f",base);
-  printf("enter height");
-  scanf("%f",height);
-
+  printf("the distance between points %f,%f and %f,%f is %f",x1,y1,x2,y2,distance);
 }
-float find_area(float base , float height, float *area){
-  area=0.5*(base)*(height);
-  return area;
-  }
-void output(float base, float height, float area){
-  printf("The area of the traingle with %f and %f is %f",base,height,area);
+void input(float *x1, float *y1, float *x2, float *y2){
+  printf("enter point");
+  scanf("%f %f",x1,y1);
+  printf("enter point");
+  scanf("%f %f",x2,y2);  
+}
+float find_distance(float x1, float y1, float x2, float y2){
+  float distance;
+  distance=sqrt( (x2-x1) * (x2-x1) + (y2-y1) * (y2-y1));
+  return distance;
+}
+void output(float x1, float y1, float x2, float y2, float distance){
+  
 }

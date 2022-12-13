@@ -1,43 +1,21 @@
 #include<stdio.h>
-int input_side();
-int check_scalene(int a, int b, int c);
-void output(int a, int b, int c, int isscalene);
+void input_triangle(float *x1, float *y1, float *x2, float *y2, float *x3, float *y3);
+int is_triangle(float x1, float y1, float x2, float y2,float x3, float y3);
+void output(float x1, float y1, float x2, float y2,float x3, float y3, int result);
 int main(){
-  int a,b,c,isscalene;
-  a=input_side();
-  b=input_side();
-  c=input_side();
-  isscalene=check_scalene( a, b, c);
-  output( a, b,c, isscalene);
+  float x1,y1,x2,y2,x3,y3;
+  int result;
+  input_triangle(&x1,&y1,&x2,&y2,&x3,&y3);
+  result=is_triangle(x1,y1,x2,y2,x3,y3);
+  output(x1,y1,x2,y2,x3,y3,result);
+void input_triangle(float *x1, float *y1, float *x2, float *y2, float *x3, float *y3){
+  printf("enter x1,y1");
+  scanf("%f %f",x1,y1);
+   printf("enter x2,y2");
+  scanf("%f %f",x2,y2);
+   printf("enter x3,y3");
+  scanf("%f %f",x3,y3);
 }
-input_side(){
-  int n;
-  printf("enter n");
-  scanf("%d",&n);
-  return n;
-  
-}
-int check_scalene(int a, int b, int c){
-   int isscalene;
-  
-  if(a==b || b==c || c==a){
-    isscalene=1;
-    }
-    
-  else{
-   isscalene=2;
-  }
-  
-   return isscalene;
-  
-}
-void output(int a, int b, int c, int isscalene){
-  if(isscalene==1){
-    printf("The triangle with sides %d %d and %d is notscalene",a,b,c);}
-    
-  else{
-   printf("The triangle with sides %d %d and %d is scalene",a,b,c);}
-  
-  
+int is_triangle(float x1, float y1, float x2, float y2,float x3, float y3){
   
 }

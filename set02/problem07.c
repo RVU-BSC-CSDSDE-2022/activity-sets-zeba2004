@@ -1,40 +1,29 @@
 #include<stdio.h>
-void input(char *name);
-int has_nice_name(char *c);
-void output(int res);
+struct triangle
+{
+float base, altitude, area;
+}
+typedef struct _triangle 
+Triangle input_triangle();
+void find_area(Traingle *t);
+void output(Triangle t);
 int main(){
-  char name;
-  char c;
-  int res;
-input(&name);
-res=has_nice_name(&c);
-output(res);
+  triangle base,altitude,area;
+  
 }
-void input(char *name){
-  printf("enter name");
-  scanf("%c",&name);
-  return name;
-}
-int has_nice_name(char *c){
-  int count=0;
-  int sum=0;
-  char name;
-  if(c[name]=='a'|| c[name]=='e'|| c[name]=='i'|| c[name]=='o'|| c[name]=='u'){
-     count++;
-  }
-  else{
-    sum++;
-  }
-}
+#include <stdio.h>
+struct triangle
+{
+    float base;
+    float height;
+    float area;
+};
+typedef struct triangle Triangle;
 
-void output(int res){
-  int count=0;
-  int sum=0;
-  res=count+sum;
-  if(res==4){
-    printf("camel is happy");
+int main()
+{
+    Triangle t;
+    scanf("%f", &t.base);
+    scanf("%d", &t.height);
+    return 0;
   }
-  else{
-    printf("camel is not happy");
-  }
-}

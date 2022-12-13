@@ -1,37 +1,43 @@
 #include<stdio.h>
-#include<math.h>
-void input_camel_details(float *stomach_radius, float *height, float *length);
-float find_weight(float stomach_radius, float height, float length);
-void output(float stomach_radius, float height, float length, float weight);
+int input_side();
+int check_scalene(int a, int b, int c);
+void output(int a, int b, int c, int isscalene);
 int main(){
-  float stomach_radius,height,length,weight;
-    input_camel_details(&stomach_radius,&height,&length);
-    weight=find_weight(stomach_radius, height, length);
-    output(stomach_radius, height,length, weight);
+  int a,b,c,isscalene;
+  a=input_side();
+  b=input_side();
+  c=input_side();
+  isscalene=check_scalene( a, b, c);
+  output( a, b,c, isscalene);
+}
+input_side(){
+  int n;
+  printf("enter n");
+  scanf("%d",&n);
+  return n;
   
 }
-void input_camel_details(float *stomach_radius, float *height, float *length){
-   
-  printf("enter stomach_radius");
-  scanf("%f",stomach_radius);
-   
-  printf("enter height");
-  scanf("%f",height);
+int check_scalene(int a, int b, int c){
+   int isscalene;
+  
+  if(a==b || b==c || c==a){
+    isscalene=1;
+    }
     
-  printf("enter length");
-  scanf("%f",length); 
+  else{
+   isscalene=2;
+  }
+  
+   return isscalene;
   
 }
-float find_weight(float stomach_radius, float height, float length){
-  float pi=3.14;
-  float weight;
-  // float(height)*(length);
-  // float (sqrt(3)*(height)*(length));
-  weight=pi*pow(stomach_radius,3)*sqrt(height * length);
-  return weight;
-
-}
-void output(float stomach_radius, float height, float length, float weight){
-  printf("The weight of the camel with stomach_radius:%f, height: %f, length: %f is : %f",stomach_radius,height,length,weight);
+void output(int a, int b, int c, int isscalene){
+  if(isscalene==1){
+    printf("The triangle with sides %d %d and %d is notscalene",a,b,c);}
+    
+  else{
+   printf("The triangle with sides %d %d and %d is scalene",a,b,c);}
+  
+  
   
 }
