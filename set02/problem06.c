@@ -1,46 +1,33 @@
 #include<stdio.h>
-int input_n();
-void input(int n, int a[n]);
-float odd_average(int n, int a[n]);
-void output(float avg);
+void input_string(int *a);
+void str_reverse(char *str, char *rev_str);
+void output(char *a, char *reverse_a);
 int main(){
-  int n;
-  float avg;
-  n=input_n();
-  int a[n];
-  input(n, a);
+   int a;
+  char str;
+  char rev_str;
+  char reverse_a;
+  input_string(&a);
   
-  avg=odd_average( n, a);
-  output(avg);
+  output(&a,&reverse_a);
 }
- int input_n(){
-   int n;
-  printf("Enter the size of the array n :\n");
-  scanf("%d",&n);
-  return n;
-}
-   
-  void input(int n, int a[n]){
-  
-  }}
-    float odd_average(int n, int a[n]){
-      int sum=0;
-      int count=0;
-      float avg;
-      for(int i=0;i<n;i++){
-        if (a[i]%2!=0){
-          sum+=a[i];
-          count+=1;
-          
-        }}
-        avg=sum/count;
-        return avg;
-    
-      
-    }
-    void output(float avg){
-      
-      
-      printf("%f",avg);
+void input_string(int *a){
 
-    }
+  printf("enter length of string a:");
+  scanf("%d",a);
+  str_reverse(&str,&rev_str);
+}
+void str_reverse(char *str, char *rev_str){
+  
+  printf("enter str");
+  scanf("%s",str);
+  for(int i=0;i<a/2;i++){
+    rev_str=str[i];
+    str[i]=str[n-1-i];
+    str[n-1-i]=rev_str;
+  }
+  output(&a,&reverse_a);
+}
+void output(char *a, char *reverse_a){
+  printf("%s",str);
+}

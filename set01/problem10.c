@@ -39,6 +39,7 @@ void output(char *string1, char *string2, int result){
     printf("both words are same");
   }
   else if(result==-1){
+    
     printf("%s is greater than %s",string2,string1);
   }
   else{

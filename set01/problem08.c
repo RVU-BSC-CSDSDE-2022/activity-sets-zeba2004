@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int input_array_size();
 void input_array(int n, int a[n]);
 int sum_n_array(int n, int a[n]);
@@ -51,7 +50,7 @@ void output(int n, int a[n],int sum)
   int i=0;
   for(i=0;i<n;i++)
     {
-    printf("%d", a[i]);
+    printf("%d\t", a[i]);
     }
   printf("is %d", sum);
 }

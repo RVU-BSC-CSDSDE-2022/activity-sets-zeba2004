@@ -11,13 +11,13 @@ int main(){
 void input_camel_details(float *stomach_radius, float *height, float *length){
   
   printf("enter stomach_radius");
-   scanf("%f",&stomach_radius);
+   scanf("%f",stomach_radius);
   
   printf("enter height");
-  scanf("%f",&height);
+  scanf("%f",height);
   
   printf("enter length");
-  scanf("%f",&length);
+  scanf("%f",length);
   return stomach_radius,height,length;
 }
 int find_mood(float stomach_radius, float height, float length){
