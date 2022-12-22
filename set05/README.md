@@ -157,7 +157,7 @@ void output(float avg);
 
 ***Input***
 ```
-5
+
 5 4 3 8 0
 ```
 

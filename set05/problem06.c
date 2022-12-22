@@ -9,7 +9,6 @@ int main(){
   n=input_n();
   int a[n];
   input(n, a);
-  
   avg=odd_average( n, a);
   output(avg);
 }
